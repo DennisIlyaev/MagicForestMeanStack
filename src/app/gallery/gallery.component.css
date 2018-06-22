@@ -1,0 +1,31 @@
+.jumbotron {
+    background: rgba(255,255,255,0.9);
+    box-shadow: 0 0 50px rgb(255,255,255);
+    padding: 3%;
+    direction: rtl;
+}
+
+img {
+    width: 307.8px;
+    height: 205.2px;
+}
+
+#wrapFix {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#wrapFix button {
+    font-size: 1.4em;
+}
+
+.gallery .pics {
+    -webkit-transition: all 350ms ease;
+    transition: all 350ms ease; 
+}
+
+.gallery .animation {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); }
+

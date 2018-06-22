@@ -1,0 +1,14 @@
+.jumbotron {
+    background: rgba(255,255,255,0.9);
+    box-shadow: 0 0 50px rgb(255,255,255);
+    padding: 3%;
+}
+
+p {
+    font-size: 1.25em;
+}
+
+img {
+    width: 450px;
+    height: 320px;
+}

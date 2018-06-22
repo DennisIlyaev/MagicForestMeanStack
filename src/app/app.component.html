@@ -1,0 +1,47 @@
+<h1 class='mainHeader'>קסם היער</h1>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">קסם היער</a>
+            </div>
+
+
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul id="test" class="nav navbar-nav">
+                    <li><a [ngClass]="hoveredDivId === 1 ? 'animated pulse' : ''" (mouseover)="setHoverDivId(1)" (mouseout)="removeHoverDivId()" routerLink='/home' routerLinkActive='active' class='waves-effect'>דף הבית</a>
+                    </li>
+                    <li><a [ngClass]="hoveredDivId === 2 ? 'animated pulse' : ''" (mouseover)="setHoverDivId(2)" (mouseout)="removeHoverDivId()" routerLink='/info' routerLinkActive='active' class='waves-effect'>מידע</a>
+                    </li>
+                    <li><a [ngClass]="hoveredDivId === 3 ? 'animated pulse' : ''" (mouseover)="setHoverDivId(3)" (mouseout)="removeHoverDivId()" routerLink='/gallery' routerLinkActive='active' class='waves-effect'>גלרייה</a>
+                    </li>
+                    <li><a [ngClass]="hoveredDivId === 4 ? 'animated pulse' : ''" (mouseover)="setHoverDivId(4)" (mouseout)="removeHoverDivId()" routerLink='/contact' routerLinkActive='active' class='waves-effect'>צור קשר</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class='container'>
+<router-outlet></router-outlet>
+    </div>
+
+            
+
+<footer class='page-footer'>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <p>Copyright &copy; Dennis Ilyaev</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+

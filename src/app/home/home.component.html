@@ -1,0 +1,146 @@
+<div class="jumbotron marq">
+        <hr>
+        <h2 class="intro-text text-center"><strong>חדשות <span style="color: red" (click)="basicModal.show();">ומבצעים!</span></strong>
+        </h2>
+        <hr>
+    <div *ngIf='this.httpService.loggedIn() === false && this.news'>
+        <marquee style="cursor: pointer;" class="marquee" direction="right" speed="normal" behavior="loop" onmouseover="this.stop();" onmouseout="this.start();"><span *ngFor='let data of news' >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{data.text}}</span></marquee>
+    </div>
+    <div *ngIf='this.httpService.loggedIn() === true'>
+        <form *ngFor='let form of news'>
+            <textarea class='inputNews' type='text' name='text' [(ngModel)]='form.text' placeholder="הוסף תוכן כאן"></textarea>
+            <button type="button" (click)='updateData(form)' class="btn btn-default">שמור</button>
+            <button type="button" (click)='deleteData(form)' class="btn btn-danger">מחק</button>
+            <br>
+            <br>
+            <br>
+        </form>
+        <br>
+        <br>
+        <button type="button" (click)='addContent()' class="btn btn-warning">הוסף תוכן</button>
+        <button type="button" (click)='loggingOut()' class="btn btn-danger">התנתק</button>
+    </div>
+</div>
+
+
+
+<div class="jumbotron">
+<!--Carousel Wrapper-->
+<div id="carousel-thumb" class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel" data-interval="2000">
+        <!--Slides-->
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="../../assets/img/images/images01/slide-1.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="../../assets/img/images/images01/slide-2.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="../../assets/img/images/images01/slide-3.jpg" alt="Third slide">
+            </div>
+            <div class="carousel-item">
+                    <img class="d-block w-100" src="../../assets/img/images/images01/slide-4.jpg" alt="Forth slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="../../assets/img/images/images01/slide-5.jpg" alt="Fifth slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="../../assets/img/images/images01/slide-6.jpg" alt="Sixth slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="../../assets/img/images/images01/slide-7.jpg" alt="Seventh slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="../../assets/img/images/images01/slide-8.jpg" alt="Eight slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="../../assets/img/images/images01/slide-9.jpg" alt="Nine slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="../../assets/img/images/images01/slide-10.jpg" alt="Ten slide">
+            </div>
+        </div>
+        <!--/.Slides-->
+        <!--Controls-->
+        <a class="carousel-control-prev" href="#carousel-thumb" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel-thumb" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <!--/.Carousel Wrapper-->
+</div>
+
+<div class="jumbotron">
+        <hr>
+        <h2 class="intro-text text-center">תרשו לעצמכם לנפוש <strong>בצימר חלומי!</strong>
+        </h2>
+        <hr>
+        <img class="img-responsive img-border img-left rounded z-depth-4" src="../../assets/img/images/images01/intro-pic.jpg" alt="">
+        <hr class="visible-xs">
+        <p>בלב נוף עוצר נשימה אל מול הרי הגליל ושקיעות מרהיבות,
+        שוכנים חמישה צימריים חמימיים ורומנטיים בלב המושבה
+        הפסטורלית ביריה שבין עמוקה לצפת.</p>
+        <p>הצימריים נבנו עם המון מחשבה ומגע אישי של בעלי הבית,
+        על מנת להביא לכם פנינת נופש חלומית הטובלת ביער טבע
+        וחורש שזורמים פנימה לתוך המבנה ואינם נשארים בפתח הדלת.
+        ב<strong>קסם היער</strong> תוכלו להנות מג'קוזי מפנק במיוחד הצופה לשמיי
+        הכוכבים ולנוף המדהים של אזורנו.</p>
+        <p>הנכם מוזמנים להתעורר עם ציוץ הציפורים וארומת פרחים בשמים
+        קטורת ונרות רייחנים...
+        עולם קסום בטבע, שלווה, רוגע, הרמוניה ורומנטיקה, רק מחכים לכם.</p>
+    </div>
+
+    <div class="jumbotron" style='min-height: 480px;'>
+            <hr>
+            <h2 class="intro-text text-center">חשוב לנו בנוסף להציע <strong>פינוקים</strong>
+            </h2>
+            <hr>
+            <p>ישנה אפשרות לארוחות בוקר עשירות במטעמים בייתים,
+            הארוחה מוגשת לחדר בשעה שתבחרו, או בגינה לפי בקשתכם...</p>
+            <p>בנוסף פינות ברביקיו המצוידות במנג'לים איכותיים ופינות ישיבה נוחות ומרווחות.</p>
+            
+        <div id='foodPics'>
+            <img src="../../assets/img/images/fb_images/food1.jpg" class="img-fluid rounded z-depth-4 img-thumbnail" alt="4">
+            <img src="../../assets/img/images/fb_images/food2.jpg" class="img-fluid rounded z-depth-4 img-thumbnail" alt="4">
+            <img src="../../assets/img/images/fb_images/food3.jpg" class="img-fluid rounded z-depth-4 img-thumbnail" alt="4">
+        </div>
+
+                
+    </div>
+
+    <!--Login Modal -->
+    <div mdbModal (keyup.enter)="login(userData)" #basicModal="mdb-modal" class="modal fade comon" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel" aria-hidden="true" [config]="{backdrop: false, ignoreBackdropClick: true}">
+        <div *ngIf='this.httpService.loggedIn() ? basicModal.hide() : true' class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title w-100 font-weight-bold">אדמיניסטרציה</h4>
+                    <button (click)="basicModal.hide()" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form ngNativeValidate>
+                <div class="modal-body mx-3">
+                    <div class="md-form mb-5">
+                        <i class="fa fa-user prefix grey-text"></i>
+                        <input name="username" type="text" id="defaultForm-name" class="form-control" [(ngModel)]='userData.username' required>
+                        <label for="defaultForm-name" style='font-size: 1.3em;'>שם משתמש</label>
+                    </div>
+    
+                    <div class="md-form mb-4">
+                        <i class="fa fa-lock prefix grey-text"></i>
+                        <input name='password' type="password" id="defaultForm-pass" class="form-control" [(ngModel)]='userData.password' required>
+                        <label for="defaultForm-pass" style='font-size: 1.3em;'>סיסמה</label>
+                    </div>
+                    <div *ngIf='errMsg' class="alert alert-danger" align="center" role="alert">{{errMsg}}</div>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button type='button' class="btn btn-default" (click)='login(userData)'>הכנס</button>
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>

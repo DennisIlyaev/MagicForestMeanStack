@@ -1,0 +1,99 @@
+<div class="jumbotron">
+        <div class="row">
+                <div class="col-md-12 d-flex justify-content-center mb-5" id='wrapFix'>
+                    <button type="button" class="btn btn-elegant btn-lg waves-effect filter" data-rel="general">כללי</button>
+                    <button type="button" class="btn btn-elegant btn-lg waves-effect filter" data-rel="pool">הגן והבריכה</button>
+                    <hr>
+                    <button type="button" class="btn btn-elegant btn-lg waves-effect filter" data-rel="1">סוויטה 1</button>
+                    <button type="button" class="btn btn-elegant btn-lg waves-effect filter" data-rel="2">סוויטה 2</button>
+                    <button type="button" class="btn btn-elegant btn-lg waves-effect filter" data-rel="3">סוויטה 3</button>
+                    <button type="button" class="btn btn-elegant btn-lg waves-effect filter" data-rel="4">סוויטה 4</button>
+                    <button type="button" class="btn btn-elegant btn-lg waves-effect filter" data-rel="5">סוויטה 5</button>
+                </div>
+            </div>
+        <div class="row">
+
+                <div class="col-md-12">
+            
+                    <div id="mdb-lightbox-ui"></div>
+                    
+                    <div class="mdb-lightbox no-margin">
+                     <div class="gallery" id="gallery">
+
+                        <!-- General pictures -->
+
+                        <div *ngFor="let generalUrl of general" class="pics animation general">
+                            <figure class="col-md-4 general">
+                                <a data-fancybox="images" class="thumbnail fancybox" rel="lightbox" href="{{generalUrl}}" data-size="1600x1067">
+                                    <img alt="picture" src="{{generalUrl}}" class="img-fluid z-depth-2">
+                                </a>
+                            </figure>
+                        </div>
+
+
+                    <!-- Pool Area -->
+
+                    <div *ngFor="let poolUrl of poolarea" class="pics animation pool">
+                        <figure class="col-md-4">
+                                <a data-fancybox="images" class="thumbnail fancybox" rel="lightbox" href="{{poolUrl}}" data-size="1600x1067">
+                                    <img alt="picture" src="{{poolUrl}}" class="img-fluid z-depth-2" />
+                                </a>
+                        </figure>
+                    </div>
+
+
+                    <!-- Cabin1 -->
+
+                    <div *ngFor="let cabinOneUrl of cabin1" class="pics animation 1">
+                        <figure class="col-md-4">
+                                <a data-fancybox="images" class="thumbnail fancybox" rel="lightbox" href="{{cabinOneUrl}}" data-size="1600x1067">
+                                    <img alt="picture" src="{{cabinOneUrl}}" class="img-fluid z-depth-2" />
+                                </a>
+                        </figure>
+                    </div>
+
+                    <!-- Cabin2 -->
+
+                    <div *ngFor="let cabinTwoUrl of cabin2" class="pics animation 2">
+                            <figure class="col-md-4">
+                                    <a data-fancybox="images" class="thumbnail fancybox" rel="lightbox" href="{{cabinTwoUrl}}" data-size="1600x1067">
+                                        <img alt="picture" src="{{cabinTwoUrl}}" class="img-fluid z-depth-2" />
+                                    </a>
+                            </figure>
+                    </div>
+
+                    <!-- Cabin3 -->
+
+                    <div *ngFor="let cabinThreeUrl of cabin3" class="pics animation 3">
+                            <figure class="col-md-4">
+                                    <a data-fancybox="images" class="thumbnail fancybox" rel="lightbox" href="{{cabinThreeUrl}}" data-size="1600x1067">
+                                        <img alt="picture" src="{{cabinThreeUrl}}" class="img-fluid z-depth-2" />
+                                    </a>
+                            </figure>
+                    </div>
+
+                    <!-- Cabin4 -->
+
+                    <div *ngFor="let cabinFourUrl of cabin4" class="pics animation 4">
+                            <figure class="col-md-4">
+                                    <a data-fancybox="images" class="thumbnail fancybox" rel="lightbox" href="{{cabinFourUrl}}" data-size="1600x1067">
+                                        <img alt="picture" src="{{cabinFourUrl}}" class="img-fluid z-depth-2" />
+                                    </a>
+                            </figure>
+                    </div>
+
+                    <!-- Cabin5 -->
+
+                    <div *ngFor="let cabinFiveUrl of cabin5" class="pics animation 5">
+                            <figure class="col-md-4">
+                                    <a data-fancybox="images" class="thumbnail fancybox" rel="lightbox" href="{{cabinFiveUrl}}" data-size="1600x1067">
+                                        <img alt="picture" src="{{cabinFiveUrl}}" class="img-fluid z-depth-2" />
+                                    </a>
+                            </figure>
+                    </div>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+</div>
