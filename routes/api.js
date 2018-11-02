@@ -5,7 +5,7 @@ const News = require('../models/news');
 const jwt = require('jsonwebtoken');
 const router = express.Router();
 
-mongoose.connect('mongodb://viktor:viktor475@ds161620.mlab.com:61620/magicforest', err => {
+mongoose.connect('mongodb://user:pass@ds161620.mlab.com:61620/magicforest', err => {
     err ? console.log(err) : console.log('Connected to DB');
 });
 
